@@ -1,2 +1,3 @@
-# haskellbook
-Haskell Programming from first principles
+# Haskell Programming From First Principles
+
+- [x] Hello Haskell
