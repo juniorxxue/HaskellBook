@@ -3,3 +3,4 @@
 - [x] Hello Haskell
 - [x] Strings
 - [x] Basic datatypes
+- [] Types
