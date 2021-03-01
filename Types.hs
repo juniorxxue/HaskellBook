@@ -1,3 +1,4 @@
+{-# LANGUAGE NoMonomorphismRestriction #-}
 module Types where
 
 -- so except for a sprinkling of syntactic sugar for things like numbers or functions
@@ -47,3 +48,9 @@ xx :: Char
 xx = undefined
 
 -- :t f xx
+
+ourId x = x
+
+example = 1
+
+-- With respect to Haskell, the principal type is the most generic type which still typechecks.
