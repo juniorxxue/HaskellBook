@@ -4,3 +4,4 @@
 - [x] Strings
 - [x] Basic datatypes
 - [x] Types
+- [x] Typeclasses
