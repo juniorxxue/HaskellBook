@@ -5,3 +5,4 @@
 - [x] Basic datatypes
 - [x] Types
 - [x] Typeclasses
+- [x] More functional patterns
