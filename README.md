@@ -6,3 +6,7 @@
 - [x] Types
 - [x] Typeclasses
 - [x] More functional patterns
+- [x] Recursion
+- [ ] Lists
+- [x] Folding lists
+- [ ] Algebraic datatypes
