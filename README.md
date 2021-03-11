@@ -12,3 +12,5 @@
 - [x] Algebraic datatypes
 - [x] Signaling adversity
 - [ ] Building projects
+- [ ] Testing
+- [ ] Monoid, Semigroup
