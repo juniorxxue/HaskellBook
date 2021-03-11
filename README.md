@@ -9,4 +9,5 @@
 - [x] Recursion
 - [ ] Lists
 - [x] Folding lists
-- [ ] Algebraic datatypes
+- [x] Algebraic datatypes
+- [ ] Signaling adversity
