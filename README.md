@@ -10,4 +10,5 @@
 - [ ] Lists
 - [x] Folding lists
 - [x] Algebraic datatypes
-- [ ] Signaling adversity
+- [x] Signaling adversity
+- [ ] Building projects
