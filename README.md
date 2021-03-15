@@ -13,4 +13,5 @@
 - [x] Signaling adversity
 - [ ] Building projects
 - [ ] Testing
-- [ ] Monoid, Semigroup
+- [x] Monoid, Semigroup
+- [ ] Functor
