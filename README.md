@@ -14,4 +14,5 @@
 - [ ] Building projects
 - [ ] Testing
 - [x] Monoid, Semigroup
-- [ ] Functor
+- [x] Functor
+- [ ] Applicative
