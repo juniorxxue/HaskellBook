@@ -16,3 +16,4 @@
 - [x] Monoid, Semigroup
 - [x] Functor
 - [ ] Applicative
+- [ ] Monads
