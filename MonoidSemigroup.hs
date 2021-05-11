@@ -1,6 +1,19 @@
 module MonoidSemigroup where
 
+-- an algebra refers to some operations and the set they operate over
+
 -- a monoid is a binary associative operation with an identity
+
+-- type Monoid :: * -> Constraint
+-- class Semigroup a => Monoid a where
+--   mempty :: a
+--   mappend :: a -> a -> a
+--   mconcat :: [a] -> a
+--   {-# MINIMAL mempty #-}
+
+-- mconcat = foldr mappend mempty
+
+
 import Data.Monoid
 
 ass1 = (Sum 1) <> (Sum 2 <> Sum 3) == (Sum 1 <> Sum 2) <> Sum 3
