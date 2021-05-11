@@ -75,3 +75,39 @@ mkSphericalCow' name' age' weight' = do
 -- return x >>= = fx
 -- Basically both of these laws are saying that return should be neutral
 -- and not perform any computation
+
+
+data Nope a =
+    NopeDotJpg
+
+instance Functor Nope where
+    fmap _ _ = NopeDotJpg
+
+instance Applicative Nope where
+    pure _ = NopeDotJpg
+    (<*>) _ _ = NopeDotJpg
+
+instance Monad Nope where
+    return = pure
+    (>>=) _ _ = NopeDotJpg
+
+data PhhhbbtttEither b a = Left' a
+                         | Right' b
+
+instance Functor (PhhhbbtttEither b) where
+    fmap f (Left' x) = Left' (f x)
+    fmap f (Right' y) = Right' y
+
+instance Applicative (PhhhbbtttEither b) where
+    pure x = Left' x
+    (<*>) (Right' y) _ = Right' y
+    (<*>) _ (Right' y) = Right' y
+    (<*>) (Left' f) (Left' x) = Left' (f x)
+
+instance Monad (PhhhbbtttEither b) where
+    return = pure
+    (>>=) (Right' y) _ = Right' y
+    (>>=) (Left' x) f = f x
+
+newtype Identity a = Identity a
+    deriving (Eq, Ord, Show)
