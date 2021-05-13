@@ -109,5 +109,3 @@ instance Monad (PhhhbbtttEither b) where
     (>>=) (Right' y) _ = Right' y
     (>>=) (Left' x) f = f x
 
-newtype Identity a = Identity a
-    deriving (Eq, Ord, Show)
