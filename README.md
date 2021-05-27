@@ -11,9 +11,9 @@
 - [x] Folding lists
 - [x] Algebraic datatypes
 - [x] Signaling adversity
-- [ ] Building projects
-- [ ] Testing
+- [x] Building projects
+- [x] Testing
 - [x] Monoid, Semigroup
 - [x] Functor
-- [ ] Applicative
+- [x] Applicative
 - [ ] Monads

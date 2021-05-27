@@ -1,19 +1,34 @@
 module Applicative where
 
-import Control.Applicative
+import Data.Monoid
+import Test.QuickCheck
+import Test.QuickCheck.Checkers
+import Test.QuickCheck.Classes
 
--- I got the motivation
-demo = fmap (*) $ Just 3
--- which creates Just (3*)
--- to use it like a normal function, we need to pattern match on Just and extract it from
--- we need a general way to do
+data Bull = Fools | Twoo deriving (Eq, Show)
+
+instance Arbitrary Bull where
+    arbitrary = frequency [(1, return Fools)
+                          ,(1, return Twoo)]
 
 
--- laws
+instance Semigroup Bull where
+    (<>) _ _ = Fools
 
--- identity: pure id <*> v = v
-demo1 = pure id <*> [1..5]
+instance Monoid Bull where
+    mempty = Fools
 
--- composition
+instance EqProp Bull where (=-=) = eq
 
--- homomorphism
+data Two a b = Two a b deriving (Eq, Show)
+
+instance Functor (Two a) where
+    fmap f (Two a b) = Two a (f b)
+
+instance (Monoid a) => Applicative (Two a) where
+    pure x = Two mempty x
+    (<*>) (Two a1 f) (Two a2 x) = Two (mappend a1 a2) (f x)
+
+main :: IO ()
+main = do
+    quickBatch (monoid Twoo)
