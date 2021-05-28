@@ -16,4 +16,5 @@
 - [x] Monoid, Semigroup
 - [x] Functor
 - [x] Applicative
-- [ ] Monads
+- [x] Monads
+- [x] Foldable
