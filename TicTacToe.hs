@@ -86,12 +86,3 @@ getNat prompt = do putStr prompt
                    else
                      do putStrLn "ERROR: Invalid Number"
                         getNat prompt
-
-tictactoe :: IO ()
-tictactoe = run empty O
-
-run :: Grid -> Player -> IO ()
-run g p = do cls
-             goto (1,1)
-             putGrid g
-             run' g p
